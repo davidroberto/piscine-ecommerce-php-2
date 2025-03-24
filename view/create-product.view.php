@@ -2,7 +2,6 @@
 
 <body>
 
-
 <h1>Créer un produit</h1>
 
 <h3><?php echo $message; ?></h3>
