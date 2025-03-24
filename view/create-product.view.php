@@ -1,5 +1,7 @@
 <html>
 
+<body>
+
 
 <h1>Créer un produit</h1>
 
@@ -30,6 +32,9 @@
 
 	<button type="submit">Valider</button>
 
+
 </form>
+
+</body>
 
 </html>

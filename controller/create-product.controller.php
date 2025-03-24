@@ -20,4 +20,6 @@ if (array_key_exists('title', $_POST) &&
 }
 
 
+
+
 require_once('../view/create-product.view.php');
