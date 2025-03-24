@@ -58,7 +58,7 @@ function getProducts() {
 }
 
 
-function getPublishedProducts() {
+function getPublishedProducts($sort) {
     // VOUS N'AVEZ RIEN VU
     global $products;
 
@@ -69,6 +69,16 @@ function getPublishedProducts() {
         if ($product["isPublished"]) {
             array_push($publishedProducts, $product);
         } 
+    }
+
+    if ($sort === "date") {
+        usort($publishedProducts, function ($productA, $productB) {
+            return $productA["publishedAt"] < $productB["publishedAt"];
+        });
+    } else {
+        usort($publishedProducts, function ($productA, $productB) {
+            return $productA["title"] > $productB["title"];
+        });
     }
 
     return $publishedProducts;

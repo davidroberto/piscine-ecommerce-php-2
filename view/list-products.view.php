@@ -4,6 +4,19 @@
 
 <main>
 
+<form>
+
+	<label>Trier les produits par :
+		<select name="sort">
+			<option value="date">Date</option>
+			<option value="title">Titre</option>
+		</select>
+	</label>
+
+	<input type="submit" />
+
+</form>
+
 <?php foreach($publishedProducts as $product) { ?>
 
 	<p><?php echo $product["title"]; ?></p>
