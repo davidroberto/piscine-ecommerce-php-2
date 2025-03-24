@@ -3,8 +3,10 @@
 
 <h1>Créer un produit</h1>
 
+<h3><?php echo $message; ?></h3>
 
-<form>
+
+<form method="post">
 
 	<label>Titre
 		<input type="text" name="title">
