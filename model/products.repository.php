@@ -48,3 +48,28 @@ $products = [
         'publishedAt'    => new DateTime('2025-03-12')
     ],
 ];
+
+
+function getProducts() {
+    // VOUS N'AVEZ RIEN VU
+    global $products;
+
+    return $products;
+}
+
+
+function getPublishedProducts() {
+    // VOUS N'AVEZ RIEN VU
+    global $products;
+
+    $publishedProducts = [];
+
+    foreach($products as $product) {
+
+        if ($product["isPublished"]) {
+            array_push($publishedProducts, $product);
+        } 
+    }
+
+    return $publishedProducts;
+}
