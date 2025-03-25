@@ -7,7 +7,7 @@
 <main>
 
 
-	<h1><?php echo $products[0]["title"]; ?></h1>
+	<h1><?php echo $firstProduct["title"]; ?></h1>
 
 </main>
 
