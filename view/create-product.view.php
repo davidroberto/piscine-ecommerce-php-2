@@ -1,6 +1,4 @@
-<html>
-
-<body>
+<?php require_once('partial/_header.php'); ?>
 
 <h1>Créer un produit</h1>
 

@@ -2,6 +2,8 @@
 
 require_once('../model/products.repository.php');
 
-$firstProduct = $products[0];
+$index = $_GET["index"];
+
+$firstProduct = $products[$index];
 
 require_once('../view/show-product.view.php');

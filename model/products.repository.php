@@ -2,7 +2,7 @@
 
 
 $products = [
-    [
+    1 => [
         'title'          => 'Réfrigérateur Samsung',
         'price'          => 499.99,
         'promotionPrice' => 449.99,
@@ -11,7 +11,7 @@ $products = [
         'category'       => 'Réfrigérateur',
         'publishedAt'    => new DateTime('2025-03-10')
     ],
-    [
+    2 =>[
         'title'          => 'Machine à laver LG',
         'price'          => 399.99,
         'promotionPrice' => 349.99,
@@ -20,7 +20,7 @@ $products = [
         'category'       => 'Lave-linge',
         'publishedAt'    => new DateTime('2025-02-28')
     ],
-    [
+    3 => [
         'title'          => 'Lave-vaisselle Bosch',
         'price'          => 299.99,
         'promotionPrice' => 279.99,
@@ -29,7 +29,7 @@ $products = [
         'category'       => 'Lave-vaisselle',
         'publishedAt'    => new DateTime('2025-01-15')
     ],
-    [
+    4 => [
         'title'          => 'Micro-ondes Whirlpool',
         'price'          => 129.90,
         'promotionPrice' => 99.90,
@@ -38,7 +38,7 @@ $products = [
         'category'       => 'Micro-ondes',
         'publishedAt'    => new DateTime('2025-03-01')
     ],
-[
+    5 => [
         'title'          => 'Four encastrable Siemens',
         'price'          => 699.99,
         'promotionPrice' => 649.99,
@@ -48,42 +48,3 @@ $products = [
         'publishedAt'    => new DateTime('2025-03-12')
     ],
 ];
-
-
-function getProducts() {
-    // VOUS N'AVEZ RIEN VU
-    global $products;
-
-    return $products;
-}
-
-
-function getPublishedProducts($sort) {
-    // VOUS N'AVEZ RIEN VU
-    global $products;
-
-    $publishedProducts = [];
-
-    foreach($products as $product) {
-
-        if ($product["isPublished"]) {
-            array_push($publishedProducts, $product);
-        } 
-    }
-
-    if ($sort === "date") {
-        usort($publishedProducts, function ($productA, $productB) {
-            return $productA["publishedAt"] < $productB["publishedAt"];
-        });
-    } elseif ($sort === "title") {
-        usort($publishedProducts, function ($productA, $productB) {
-            return $productA["title"] > $productB["title"];
-        });
-    } elseif ($sort === "price") {
-        usort($publishedProducts, function ($productA, $productB) {
-            return $productA["price"] > $productB["price"];
-        });
-    }
-
-    return $publishedProducts;
-}

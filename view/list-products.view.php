@@ -1,6 +1,4 @@
-<html>
-
-<body>
+<?php require_once('partial/_header.php'); ?>
 
 <main>
 
@@ -18,14 +16,20 @@
 
 </form>
 
-<?php foreach($publishedProducts as $product) { ?>
+<?php foreach($products as $index => $product) { ?>
 
-	<p><?php echo $product["title"]; ?></p>
-	<p><?php echo $product["price"]; ?></p>
-	<p><?php echo $product["promotionPrice"]; ?></p>
-	<img src="<?php echo $product["image"]; ?>" />
-	<p><?php echo $product["category"]; ?></p>
-	<p><?php echo $product["publishedAt"]->format('Y-m-d'); ?></p>
+	<?php if($product["isPublished"]) { ?>
+
+		<p><?php echo $product["title"]; ?></p>
+		<p><?php echo $product["price"]; ?></p>
+		<p><?php echo $product["promotionPrice"]; ?></p>
+		<img src="<?php echo $product["image"]; ?>" />
+		<p><?php echo $product["category"]; ?></p>
+		<p><?php echo $product["publishedAt"]->format('Y-m-d'); ?></p>
+		<a href="http://localhost:8888/php-piscine-ecommerce/controller/show-product.controller.php?index=<?php echo $index; ?>">Voir le produit</a>
+
+	<?php } ?>
+
 
 <?php } ?>
 
