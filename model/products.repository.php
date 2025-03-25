@@ -75,9 +75,13 @@ function getPublishedProducts($sort) {
         usort($publishedProducts, function ($productA, $productB) {
             return $productA["publishedAt"] < $productB["publishedAt"];
         });
-    } else {
+    } elseif ($sort === "title") {
         usort($publishedProducts, function ($productA, $productB) {
             return $productA["title"] > $productB["title"];
+        });
+    } elseif ($sort === "price") {
+        usort($publishedProducts, function ($productA, $productB) {
+            return $productA["price"] > $productB["price"];
         });
     }
 

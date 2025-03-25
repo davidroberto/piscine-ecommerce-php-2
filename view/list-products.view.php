@@ -10,6 +10,7 @@
 		<select name="sort">
 			<option value="date">Date</option>
 			<option value="title">Titre</option>
+			<option value="price">Prix</option>
 		</select>
 	</label>
 
